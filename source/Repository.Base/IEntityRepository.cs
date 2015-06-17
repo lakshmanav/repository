@@ -55,7 +55,7 @@ namespace Repository.Base
         /// and -fieldname for descending sort</param>
         /// <param name="skip">paging options. number of items to be skipped from the matching list</param>
         /// <param name="take">paging options. number of items to be returned from the matching list</param>
-        /// <returns></returns>
+        /// <returns>a query matched, sorted, paged list of entities</returns>
         Task<PagedResult<TId, TEntity>> GetAsync(IEntityQuery<TId, TEntity> query, List<string> sorting = null,
             double? skip = null, double? take = null);
 
